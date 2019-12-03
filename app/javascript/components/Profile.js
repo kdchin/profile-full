@@ -14,9 +14,10 @@ class Profile extends React.Component {
     }
   }
 
+  // this is called before when the component is "mounted" on the DOM
   componentDidMount() {
     getProfile(this.props.id).then(data => {
-      this.setState({ person: data })
+      this.setState({ person: data }) // data is whatever json our backend route returns
     });
   }
 
@@ -38,6 +39,8 @@ class Profile extends React.Component {
   }
 
   render() {
+    // since the fetching of data is async, we need to display
+    // something (anything!) while we wait for it to complete
     if (this.state.person === null) {
       return <div>Loading...</div>
     }
