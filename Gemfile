@@ -13,6 +13,10 @@ gem 'sqlite3', '~> 1.3.10'
 gem 'pg', '0.20.0'
 gem 'activerecord-postgis-adapter'# , '2.2.0'
 
+# react stuff
+gem 'react-rails'
+gem 'webpacker'
+
 gem 'active_model_serializers'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
