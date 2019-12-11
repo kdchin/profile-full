@@ -17,7 +17,7 @@ class Profile extends React.Component {
   // this is called before when the component is "mounted" on the DOM
   componentDidMount() {
     getProfile(this.props.id).then(data => {
-      this.setState({ person: data }) // data is whatever json our backend route returns
+      this.setState({ person: data })
     });
   }
 
